@@ -26,10 +26,10 @@ const grownPlants = harvestPlants(seedPlot);
 // alphabetize(grownPlants);
 
 //presents array of harvested plants as HTML <div>s
-// Catalog(grownPlants);
+Catalog(grownPlants);
 
 // converts array into object with key (type) value (number of occurances) structure
-const countedPlants = countHarvest(grownPlants);
+// const countedPlants = countHarvest(grownPlants);
 
 //presents HTML table of produce count
-countTable(countedPlants);
+// countTable(countedPlants);
