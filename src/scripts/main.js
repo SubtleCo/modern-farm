@@ -6,6 +6,8 @@ import { plantSeeds } from './tractor.js';
 import { harvestPlants } from './harvester.js';
 import { Catalog } from './catalog.js';
 import { alphabetize } from './orderByAlphabet.js';
+import { countHarvest } from './count.js';
+import { countTable } from './countTable.js';
 
 // randomly generate a 3x6 matrix of plant names
 const yearlyPlan = createPlan();
@@ -21,7 +23,13 @@ const seedPlot = usePlants();
 const grownPlants = harvestPlants(seedPlot);
 
 //order array of harvested objects
-alphabetize(grownPlants);
+// alphabetize(grownPlants);
 
 //presents array of harvested plants as HTML <div>s
-Catalog(grownPlants);
+// Catalog(grownPlants);
+
+// converts array into object with key (type) value (number of occurances) structure
+const countedPlants = countHarvest(grownPlants);
+
+//presents HTML table of produce count
+countTable(countedPlants);
