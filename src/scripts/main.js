@@ -8,6 +8,7 @@ import { Catalog } from './catalog.js';
 import { alphabetize } from './orderByAlphabet.js';
 import { countHarvest } from './count.js';
 import { countTable } from './countTable.js';
+import { assignIDToPlants } from './id.js'
 
 // randomly generate a 3x6 matrix of plant names
 const yearlyPlan = createPlan();
@@ -20,16 +21,21 @@ const seedPlot = usePlants();
 
 //convert array of seed objects into array of plant objects (multiplied by output.)
 //special case for corn
-const grownPlants = harvestPlants(seedPlot);
+const harvestedPlants = harvestPlants(seedPlot);
 
-//order array of harvested objects
+//***OPTIONAL*** order array of harvested objects
 // alphabetize(grownPlants);
+// console.log(harvestedPlants);
+// debugger;
+
+//***OPTIONAL*** Assign ID to each harvested plant
+const plantsWithID = assignIDToPlants(harvestedPlants)
 
 //presents array of harvested plants as HTML <div>s
-// Catalog(grownPlants);
+Catalog(plantsWithID);
 
 // converts array into object with key (type) value (number of occurances) structure
-const countedPlants = countHarvest(grownPlants);
+// const countedPlants = countHarvest(grownPlants);
 
 //presents HTML table of produce count
-countTable(countedPlants);
+// countTable(countedPlants);
