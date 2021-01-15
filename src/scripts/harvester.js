@@ -12,17 +12,5 @@ export const harvestPlants = (plants) => {
             }
         }
     }    
-    const plantsWithID = harvestedPlants.slice()
-
-    let uniqueID = 0;
-    plantsWithID.map(item => {
-        uniqueID++;
-        item.number = uniqueID;
-        console.log(typeof(item));
-        console.log(typeof(harvestedPlants));
-        uniqueID++;
-        debugger;
-    });
-    console.log(plantsWithID);
-    return plantsWithID;
+    return harvestedPlants;
 }
