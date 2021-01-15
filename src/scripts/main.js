@@ -25,6 +25,8 @@ const harvestedPlants = harvestPlants(seedPlot);
 
 //***OPTIONAL*** order array of harvested objects
 // alphabetize(grownPlants);
+// console.log(harvestedPlants);
+// debugger;
 
 //***OPTIONAL*** Assign ID to each harvested plant
 const plantsWithID = assignIDToPlants(harvestedPlants)
